@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!This is the 1st Project for Virtual Frameworks>
+<html>
+		<head>
+				<title>Eugene Proctor :: Project 1 :: VFW 1212</title>
+				<title>App Name :: No Talking No Texting While Driving App</title>
+				<link rel="stylesheet" href="sdi.css" type="text/css" />
+				<meta charset="UTF-8" />
+				<meta name="description" content="This is the registration page for the inbound 
+				IT Service Desk." />
+				<meta name="keywords" content="Level One Call Support, html5, mobile development, Full Sail University" />
+				<meta name="robots" content="noindex, nofollow" />
+				<meta name="viewports" content="user-scalable=no, width=device-width"/>
+				<link href="css/styles.css" rel="stylesheet" type="text/css"/>
+			
+		</head>
+
+	<body>
+				
+		<header>
+
+				<h1>Level One Call Support</h1>
+				<h2>Trouble Ticket Information</h2>
+
+		</header>
+
+		<article>
+
+				<p>This is the registration page for the inbound IT Service Desk.  This 
+				application will obtain the call ticket information for Level One 
+				Support Calls.</p>  
+
+		</article>
+
+		<form action = "#" method="post">
+			<fieldset>
+				<legend>Call Ticket Information</legend>
+				<li>Date:
+					<label for="startdate">Today&#39;s date is :</label>
+					<input type="date" min="2012-01-01" max="2012-12-31" id="startdate" name="startdate" placeholder "yyyy-mm-dd">
+					
+				</li>
+					<ul>
+						<li><label for="fname">Full Name :</label><input type="text" id="fname"/></li>
+						<li><label for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/></li>
+						<li><label for="ticket">Ticket Number :</label><input type="text" id="ticket"/></li>
+						<li><label for="problem">Description of Problem :</label><br><textarea id="problem"></textarea></li>
+						
+						
+						
+						<small>Enter details to help resolve the issue.</small>
+						
+					</ul>
+				
+					
+				<li>Best time to Visit Customer If needed?:					
+					<ul>
+						<li><input type="radio" checked value="Morning" id="morning" name="visit" /><label for="morning">Between 8am to 11am</label></li>
+						<li><input type="radio" value="Lunch" id="lunch" name="visit" /><label for="lunch">Between 11am to 1pm</li>
+						<li><input type="radio" value="Evening" id="evening" name="visit" /><label for="evening">Between 1pm to 5pm</li> 
+						
+						
+						
+						<small>Enter details to help resolve the issue.</small>
+						
+					</ul>
+					
+				<li>Estimated Time to Resolve the Call:
+					<select>
+							<optgroup label="Estimated Time:">	
+								<option>within 1 Hour</option>
+								<option>within 4 Hour</option>
+								<option>within 8 Hour</option>
+								<option>within 24 Hour</option>	
+					</select>
+					
+				
+				</li></br>
+			
+					
+					
+				<li>Rate the customer service on this call from 1 - 10</br>
+					<label for="rating"> My customer service experience today is :</label>
+					<input type+"range" min="1" max+"10" name="rating" type="range">
+
+					
+				<li><input type="hidden" value="true" /></li></br>
+
+				<input type="reset" value="Clear the Information above"/>
+					
+			</fieldset>		
+
+
+
+<footer>
+			<nav>
+				<ul>
+					<li><a href="#" title="DisplayData">Display Data</a></li>
+					<small>This will reset the page, since there is not stored data</small>
+					
+					
+				</ul>			
+			</nav>	
+
+			
+			<input type="submit" value="Submit Information" />
+			
+</footer>
+
+
+<script type="text/javascript" src="Eugene_Proctor_Project1.js"></script>
+
+	</body>
+		
+
+</html>
