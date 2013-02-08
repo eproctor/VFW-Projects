@@ -7,7 +7,7 @@
 		<title>App Name :: No Texting While Driving</title>
 		<link rel="stylesheet" href="sdi.css" type="text/css" />
 		<meta charset="UTF-8" />
-		<meta name="description" contect="Registration Page for - No Texting While Driving App" />
+		<meta name="description" contect="Owner Registration Page for - No Texting While Driving App" />
 		<meta name="keyword" contect="No Texting While Driving" />
 		<meta name="robots" content="noindex, nofollow" />
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
@@ -18,52 +18,75 @@
 	<body>
 		
 		<header>
-			<h1>No Texting While Driving</h1> 
-			<h2>Registration Page</h2>
+			<h1>No Texting - While Driving</h1> 
+			<h2>Owner Registration Page</h2>
 		</header>
 		
 		<article>
 		
-			<p>This is the Registration Page for the No Text - While Driving App</p>
+			<p>This is the Owner Registration Page for the No Text - While Driving App</p>
 			
 		</article>
 		
 		<form action = "#" method="post">
 			<fieldset>
 				<legend>Registration Information</legend>
-					<li>Date:
-						<label for="startdate">Today&#39;s date is :</label>
-						<input type="date" min="2012-01-01" max="2012-12-31" id="startdate" name="startdate" placeholder "yyyy-mm-dd">
-					</li>	
-						<ul>
-							<li><label for="fname">Full Name :</label><input type="text" id="fname"/></li>
-							<li><label for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/></li>
-							<li><label for="description">Error Message to Display :</label><textarea id="description"></textarea></li>
-							
 				
+				
+					<ul>
+						<li>
+							<label for="startdate">Today&#39;s Date:</label>
+							<input type="date" min="2012-01-01" max="2012-12-31" id="startdate" name="startdate" placeholder="yyyy-mm-dd"/>
+						</li>
+					</ul>	
+					
+					<ul>
+					
+						<li><label for="fname">Full Name :</label><input type="text" id="fname"/></li>
+						<li><label for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/></li>
+						<li><label for="description">Error Message to Display :</label><textarea id="description"></textarea></li>
+						<li>City:
+							<select>
+							<optgroup lable="cityChoice:">
+								<option>Atlanta</option>
+								<option>Charlotte</option>
+								<option>Florida</option>
+							</select>
+						</li>
+						
+ 					</ul>
+ 
+					<ul>
+					<li>How did you hear of this app?</li>
+						<ul>
+							<li><input type="radio" checked value="SocialMedia" id="socialmedia" name="survey" /><label for="socialmedia">Social Media</label></li>
+							<li><input type="radio" value="television" id="television" name="survey" /><label for="television">Television</label></li>
+							
+							<li><input type="radio" value="television" id="radios" name="survey" /><label for="radios">Radio</label></li>
+							<li><input type="radio" value="television" id="friend" name="survey" /><label for="friend">Friend</label></li>
+						</ul>
+					</ul>
+				
+				 	<ul>
+						<li>Rate your comfort level on using this app...</li>
+						<label for="rating"> "The rating is from 1 to 10:"</label>
+						<input type="range" min="1" max="10" name="rating">
+					</ul>
 				
 			</fieldset>	
 			
+			
 		</form>	
 		
-		
-		
-		
-		
-		
-		
-		
 		<footer>
+			<nav>
+				<ul>
+					<li><a href="#" title="DisplayData">Display Data</a></li>	
+					<li><input type="submit" value="Submit Information"/></li>					
+				</ul>
+			</nav>
+		</footer>
 		
-		<nav>
-			<ul>
-				
-				<li> Begin Registration</li>
-				
-			</ul>
-		</nav>
-		</footer>	
-	
 		<script type="text/javascript" src="js/main.js"></script>
 		
 	</body>
