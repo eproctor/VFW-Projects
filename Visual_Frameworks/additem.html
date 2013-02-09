@@ -10,7 +10,7 @@
 		<meta name="description" contect="Owner Registration Page for - No Texting While Driving App" />
 		<meta name="keyword" contect="No Texting While Driving" />
 		<meta name="robots" content="noindex, nofollow" />
-		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" />
 		
 	</head>
@@ -42,12 +42,12 @@
 					
 					<ul>
 					
-						<li><label for="fname">Full Name :</label><input type="text" id="fname"/></li>
+						<li><label for="fullName">Full Name :</label><input type="text" id="fullName"/></li>
 						<li><label for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/></li>
-						<li><label for="description">Error Message to Display :</label><textarea id="description"></textarea></li>
+						<li><label for="description">Error Message to Display :</label><textarea id="description">Comment Here...</textarea></li>
 						<li>City:
 							<select>
-							<optgroup lable="cityChoice:">
+							<optgroup label="Please Choose:">
 								<option>Atlanta</option>
 								<option>Charlotte</option>
 								<option>Florida</option>
@@ -69,24 +69,28 @@
 				
 				 	<ul>
 						<li>Rate your comfort level on using this app...</li>
-						<label for="rating"> "The rating is from 1 to 10:"</label>
-						<input type="range" min="1" max="10" name="rating">
+							<ul>
+								<li><label for="rating"> "The rating is from 1 to 10:"</label>
+								<input type="range" min="1" max="10" name="rating"/></li> 
+								<li><input type="hidden" value="false"/></li> 
+							</ul>
 					</ul>
 				
 			</fieldset>	
 			
 			
+		 	
+		
+			<footer>
+				<nav>
+					<ul>
+						<li><a href="#" title="DisplayData">Display Data</a></li>	
+						<li><input type="submit" value="Submit Information"/></li>					
+					</ul>
+				</nav>
+			</footer>
+		
 		</form>	
-		
-		<footer>
-			<nav>
-				<ul>
-					<li><a href="#" title="DisplayData">Display Data</a></li>	
-					<li><input type="submit" value="Submit Information"/></li>					
-				</ul>
-			</nav>
-		</footer>
-		
 		<script type="text/javascript" src="js/main.js"></script>
 		
 	</body>
