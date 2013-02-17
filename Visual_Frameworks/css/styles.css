@@ -1,0 +1,62 @@
+/*
+title: Web App Part 2 - css file 
+by: Eugene Proctor   Term: 1302
+for: VFW - CSS Selectors
+*/
+
+
+
+body {
+	background: #e1b016; 
+/*	background-image: url("img/ver_bkground_03_05.png"); */
+}
+
+h1 {
+	text-align: center;
+	border: 2px solid black;
+	padding: 10px;
+}
+
+h2 {
+	text-align: left;
+}
+
+a:hover {
+	color: #f8620a; /* orange */
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: #0063ec;  /* blue */
+}
+
+p {
+	color: #000000;
+	font-family: "myriad pro", Times, serif;
+	line-height: 1.5em;
+	
+}
+
+legend {
+	font-weight: bold;
+}
+
+label, input {
+	margin-bottom: 10px;
+}
+
+.moreSpace {
+
+	margin-bottom: 10px;
+	
+	
+
+}
+
+#startdate, #fullName, #email, #city {
+	float: right;
+	margin-right: 50px;
+	border: 1px solid black;
+}
+

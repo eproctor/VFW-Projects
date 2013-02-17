@@ -3,7 +3,7 @@
 
 	<head>
 		
-		<title>Eugene Proctor :: Project 1 :: VFW 1302 </title>
+		<title>Eugene Proctor :: Project 2 :: VFW 1302 </title>
 		<title>App Name :: No Texting While Driving</title>
 		<link rel="stylesheet" href="sdi.css" type="text/css" />
 		<meta charset="UTF-8" />
@@ -16,8 +16,11 @@
 	</head>
 
 	<body>
-		
+	
+		<div id="display">
+	
 		<header>
+	
 			<h1>No Texting - While Driving</h1> 
 			<h2>Owner Registration Page</h2>
 		</header>
@@ -27,74 +30,92 @@
 			<p>This is the Owner Registration Page for the No Texting - While Driving App</p>
 			
 		</article>
-		
-		<form action = "#" method="post">
-			<fieldset>
-				<legend>Registration Information</legend>
-				
-				
-					<ul>
-						<li>
-							<label for="startdate">Today&#39;s Date:</label>
-							<input type="date" min="2012-01-01" max="2012-12-31" id="startdate" name="startdate" placeholder="yyyy-mm-dd"/>
-						</li>
-					</ul>	
-					
-					<ul>
-					
-						<li><label for="fullName">Full Name :</label><input type="text" id="fullName"/></li>
-						<li><label for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/></li>
-						
-						<li>City you travel within the most:
-							<select>
-							<optgroup label="Please Choose:">
-								<option>Atlanta</option>
-								<option>Charlotte</option>
-								<option>Florida</option>
-							</select>
-						</li>
-						
-						
- 					</ul>
- 			</fieldset>
- 			<fieldset>
- 				<legend>Survey</legend>		
-					<ul>
-					<li>How did you hear of this app?</li>
-						<ul>
-							<li><input type="radio" checked value="SocialMedia" id="socialmedia" name="survey" /><label for="socialmedia">Social Media</label></li>
-							<li><input type="radio" value="television" id="television" name="survey" /><label for="television">Television</label></li>
-							
-							<li><input type="radio" value="television" id="radios" name="survey" /><label for="radios">Radio</label></li>
-							<li><input type="radio" value="television" id="friend" name="survey" /><label for="friend">Friend</label></li>
-						</ul>
-					<li><label for="description">Would you recommend this app to a friend?</label><textarea id="description">Comment Here...</textarea></li>
-					</ul>
-				
-				 	<ul>
-						<li>Rate your comfort level with using this app...</li>
+			<div  id="hide">
+				<form action = "#" method="post">
+					<fieldset>
+						<legend>Registration Information</legend>
+												
 							<ul>
-								<li><label for="rating"> "The rating is from 1 to 10:"</label>
-								<input type="range" min="1" max="10" name="rating"/></li> 
-								<li><input type="hidden" value="false"/></li> 
+								<div class="moreSpace">
+									<li>
+										<label id="key">Key Value</label>									
+									</li>
+								</div>
+								<li>
+									
+									<label class="" for="startdate">Today&#39;s Date:</label>
+									<input type="date" min="2012-01-01" max="2012-12-31" id="startdate" name="startdate" placeholder="yyyy-mm-dd"/>
+						
+								</li>
+							</ul>	
+							
+							<ul>
+								<div class="moreSpace">
+									<li><label class="moreSpace" for="fullName">Full Name :</label><input type="text" id="fullName"/></li>
+								</div>
+								<div class="moreSpace">
+									<li><label class="moreSpace" for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/></li>
+								</div>
+								
+								<li >City you travel within the most:
+									<select id="city">
+										<optgroup label="Please Choose:">
+											<option value="atlanta">Atlanta</option>
+											<option value="charlotte">Charlotte</option>
+											<option value="florida">Florida</option>
+										</optgroup>	
+									</select>
+								</li>
+								
 							</ul>
-					</ul>
-				
-			</fieldset>	
-			
-			
-		 	
-		
-			<footer>
-				<nav>
-					<ul>
-						<li><a href="#" title="DisplayData">Display Data</a></li>	
-						<li><input type="submit" value="Submit Information"/></li>					
-					</ul>
-				</nav>
-			</footer>
-		
-		</form>	
+							
+					</fieldset>
+					
+					
+					<fieldset>
+						<legend>Survey</legend>		
+							<ul>
+								<li>How did you hear of this app?</li>
+									<ul>
+										<li><input id="socialmedia" type="checkbox" name="survey" value="socialmedia" checked /><label for="socialmedia">Social Media</label></li>
+										<li><input id="television" type="checkbox" name="survey" value="television" /><label for="television">Television</label></li>
+										
+										<li><input id="radios" type="checkbox" name="survey" value="radios" /><label for="radios">Radio</label></li>
+										<li><input id="friend" type="checkbox" name="survey" value="friend" /><label for="friend">Friend</label></li>
+									</ul>
+								<li><label for="description">Would you recommend this app to a friend?</label><textarea id="description" value="description">Comment Here...</textarea></li>
+							</ul>
+						
+							<ul>
+								<li>Rate your comfort level with using this app...</li>
+									<ul>
+										<li><label for="rating"> "The rating is from 1 to 10:"</label>
+										<input id="rating" type="range" min="1" max="10" name="rating"/></li> 
+										<li><input type="hidden" value="false"/></li> 
+									</ul>
+							</ul>
+						
+					</fieldset>	
+					
+									
+					<footer>
+						<nav>
+							<ul>
+								<div class="moreSpace">									
+									<button onclick="displayData()">Display Data</button>
+									<button onclick="clearData()" >Clear Button</button>
+								</div>
+								<li><input type="submit" value="Submit Information" onclick="storeData()"/></li>					
+							</ul>
+						</nav>
+					</footer>
+					
+					
+				 
+				</form>	
+			</div>	
+		</div>
+	
 		<script type="text/javascript" src="js/main.js"></script>
 		
 	</body>
