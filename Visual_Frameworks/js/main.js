@@ -1,9 +1,13 @@
+/* Name: Eugene Proctor :: Project 2 :: VFW 1302 */
+
+
+
 
 /* ========== Obtain Unique Key ========== */
 
-	var keyValue = document.getElementById("key")
+	var keyValue = document.getElementById("key");
 	keyValue.innerHTML=Math.random();
-	/* localStorage.keyEntry = keyValue.innerHTML; */
+	
 
 
 
@@ -43,8 +47,8 @@ var storeData = function() {
 var displayData = function() {
 			
 				/*	alert ("hello"); */
-				var myUlTag = document.createElement("ul");
-				var myDiv = document.getElementById("display");
+				var newUlTag = document.createElement("ul");
+				var holdDiv = document.getElementById("display");
 			 
 			
 				var displayArray = [
@@ -64,16 +68,16 @@ var displayData = function() {
 				];
 			
 			
-				myDiv.appendChild(myUlTag);
+				holdDiv.appendChild(newUlTag);
 				
 				for (i=0, j=displayArray.length; i<j; i++) {
 					var anLiTag = document.createElement("li");
 					anLiTag.innerHTML = displayArray[i];
-					myUlTag.appendChild(anLiTag);
+					newUlTag.appendChild(anLiTag);
 			
 			}			
 	var emptyScreen = document.getElementById("hide")
-	emptyScreen.innerHTML = hidden=true;
+	emptyScreen.innerHTML = "hidden=true";
 
 }
 
@@ -83,8 +87,7 @@ var displayData = function() {
 
 
 var clearData = function() {
-
 		
-			localStorage.clear(); 
+	localStorage.clear(); 
 		
 }
