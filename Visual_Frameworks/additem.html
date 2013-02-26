@@ -5,7 +5,6 @@
 		
 		<title>Eugene Proctor :: Project 2 :: VFW 1302 </title>
 		<title>App Name :: No Texting While Driving</title>
-		<link rel="stylesheet" href="sdi.css" type="text/css" />
 		<meta charset="UTF-8" />
 		<meta name="description" contect="Owner Registration Page for - No Texting While Driving App" />
 		<meta name="keyword" contect="No Texting While Driving" />
@@ -30,8 +29,10 @@
 			<p>This is the Owner Registration Page for the No Texting - While Driving App</p>
 			
 		</article>
+			<div id="editLink">
 			<div  id="hide">
-				<form action = "#" method="post">
+				<!-- form action = "#" method="post" id="checkBoxField" -->
+				<form    id="checkBoxField">
 					<fieldset>
 						<legend>Registration Information</legend>
 												
@@ -77,7 +78,7 @@
 							<ul>
 								<li>How did you hear of this app?</li>
 									<ul>
-										<li><input id="socialmedia" type="checkbox" name="survey" value="socialmedia" checked /><label for="socialmedia">Social Media</label></li>
+										<li><input id="socialmedia" type="checkbox" name="survey" value="socialmedia" /><label for="socialmedia">Social Media</label></li>
 										<li><input id="television" type="checkbox" name="survey" value="television" /><label for="television">Television</label></li>
 										
 										<li><input id="radios" type="checkbox" name="survey" value="radios" /><label for="radios">Radio</label></li>
@@ -102,10 +103,12 @@
 						<nav>
 							<ul>
 								<div class="moreSpace">									
-									<button onclick="displayData()">Display Data</button>
-									<button onclick="clearData()" >Clear Button</button>
+									 
+									<li><button id="submitButton" >Submit Information</button> <a href="#" id="displayButton" title="Display Data">Display Data</a>
+									
+									<button id="clearButton" >Clear Button</button> </li>
 								</div>
-								<li><input type="submit" value="Submit Information" onclick="storeData()"/></li>					
+								
 							</ul>
 						</nav>
 					</footer>
@@ -115,6 +118,25 @@
 				</form>	
 			</div>	
 		</div>
+	
+	
+		<div id="modificationButtons">
+			
+			<nav>
+				<ul>
+				
+					<li><a href="additem.html" id="goback" title="Display Saved Info">Go To Home Page - To Edit Data</a></li>
+				</ul>
+				<ul>
+					<li> <a href="#" id="getInfo" title="Edit Entry"> Edit Data </a></li>
+				    <li><a href="#" id="removeData" title="Delete Entry"> Delete Data </a></li>
+					
+			
+				</ul>
+			</nav>
+		</div>	
+		
+	
 	
 		<script type="text/javascript" src="js/main.js"></script>
 		
