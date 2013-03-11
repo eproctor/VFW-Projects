@@ -7,30 +7,17 @@ by: Eugene Proctor   Term: 1303
 for: VFW - CSS Selectors
 */
 
-/*
-fieldset {
-
-background: #e1b016;
-
-}
-*/
 
 .dcaRow {
 
-/*	border: 2px solid black;*/
-/*	float: right;*/
 	margin-left: 5em; 
 	font-family: "myriad pro", Times, serif;
 	font-weight: bold;
 
-
 }
 
 body {
-
-/*	background: yellow;  */
 	background: #e1b016; 
-/*	background-image: url("img/ver_bkground_03_05.png"); */
 }
 
 h1 {
@@ -73,15 +60,10 @@ label, input {
 .moreSpace {
 
 	margin-bottom: 10px;
-	/*border: 1px solid blue;*/
-	
-	
-
 }
 
 #startdate, #fullName {
 	float: right;
-/*	margin-right: 50px; */
 	border: 1px solid black; 
 }
 
@@ -103,44 +85,3 @@ label, input {
 	float: right;
 }
 
-/*
-#fontCity, #fontEmail {
-	margin-top: 30px; 
-	margin-bottom: 30px;
-	border: 1px solid red;
-/*	margin-right: 30px; */
-	float: left;
-
-
-#city, #email {
-/*	
-	margin-top: 30px; 
-	margin-bottom: 30px;
-
-	margin-right: 30px;
-	
-	
-	border: 1px solid red;
-	float: right;
-
-}
-
-/*
-#fontEmail {
-
-	margin-top: 30px; 
-	border: 1px solid red;
-	float: right;
-
-}
-
-
-/*
-#email, #fontEmail {
-
-	border: 1px solid red;
-	margin-top: 30px; 
-	float: right;
-
-}
-*/

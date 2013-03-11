@@ -20,19 +20,6 @@
 
 
 
-/* ========== Look for blur events ========== */
-/*
-	fullName.addEventListener("blur", saveData);	
-	startdate.addEventListener("blur", saveData);
-	email.addEventListener("blur", saveData);
-	city.addEventListener("blur", saveData);
-	checkBoxField.addEventListener("blur", saveData);
-	description.addEventListener("blur", saveData);
-	rating.addEventListener("blur", saveData);
-//	keyValue.addEventListener("blur", saveData); 
-
-*/
-
 
 /* ========== Obtain Unique Key ========== */
 
@@ -180,25 +167,3 @@ var addContact = function() {
 
 
 
-
-
-//------------------------------------------------------------		
-
-
-		
-	
-
-
-/* ======================  Call Functions and Buttons for Testing ====================  */
-
-/*
-//	submitButton.addEventListener("click", saveData);
-//	displayButton.addEventListener("click", displayEntries); 
-//	clearButton.addEventListener("click", clearData); 
-	//submitButton.addEventListener("click", clearData); 
-	//getInfo.addEventListener("click", recoverData)
-	//removeData.addEventListener("click", deletedata)
-
-*/
-
-	
