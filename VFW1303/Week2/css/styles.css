@@ -17,7 +17,7 @@ for: VFW - CSS Selectors
 }
 
 body {
-	background: #e1b016; 
+	 background: #e1b016; 
 }
 
 h1 {
@@ -53,35 +53,112 @@ legend {
 	font-weight: bold;
 }
 
+
+
 label, input {
 	margin-bottom: 10px;
 }
 
+
+
 .moreSpace {
+
+	margin-bottom: 15px;
+}
+
+
+
+.moreSpaceUp {
+
+	margin-top: 50px;
+	border: 1px solid yellow;
+	
+}
+
+
+.moreSpace li {
 
 	margin-bottom: 10px;
 }
+
+
 
 #startdate, #fullName {
 	float: right;
 	border: 1px solid black; 
 }
 
+
+
 #fontEmail {
 	border: 1px solid #e1b016; 
 }
 
+
+
 #email {
-	border: 1px solid blue;
+	border: 1px solid black;
 	float: right;
 }
+
 
 #fontCity {
 /*	border: 1px solid red; */
 }
+
 
 #city {
 /*	border: 1px solid blue; */
 	float: right;
 }
 
+
+.turnGreenTravel {
+
+	margin-top: 40px;
+
+}
+
+
+input:focus, textarea:focus {
+	background-color:yellow;
+}
+
+
+.desTextBox {
+
+	border: 2px solid #0063ec;  /*blue*/
+	background-color:yellow;
+}
+
+
+.turnGreen {
+
+	float: right;
+	border: 2px solid #0063ec;	
+	
+}
+
+
+#greenBorder {
+		float: right;
+		border: 2px solid #0063ec;
+		background-color:yellow;
+
+}
+
+#turnGreen {
+
+		float: right;
+		border: 2px solid #0063ec;
+		background-color:yellow;
+
+}
+
+#greenBorderCity {
+
+		float: right;
+		border: 2px solid #0063ec;
+		background-color:yellow;
+
+}

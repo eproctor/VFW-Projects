@@ -10,6 +10,7 @@
 		<meta name="robots" content="noindex, nofollow" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+		<!-- link href="css/styles_two.css" rel="stylesheet" type="text/css" / -->
 		
 	</head>
 
@@ -59,7 +60,7 @@
 									<ul>
 									
 										<div class="moreSpace">
-											<li><label class="moreSpace" for="fullName">Point of Contact:</label><input type="text" id="fullName"/></li>
+											<li><label class="moreSpace" for="fullName">Point of Contact:</label><input type="text" id="fullName" /></li>
 										</div>
 										<div class="moreSpace">
 											<div id="fontEmail">
@@ -82,24 +83,33 @@
 							<fieldset>
 								<legend>Survey</legend>		
 									<ul>
-									<li>Relationship to Owner</li>
-										<ul>
-											<li><input id="parent" type="checkbox" name="survey" value="parent" /><label for="parent">Parent</label></li>
-											<li><input id="aunt" type="checkbox" name="survey" value="aunt" /><label for="aunt">Aunt</label></li>
-											<li><input id="guardian" type="checkbox" name="survey" value="guardian" /><label for="guardian">Guardian</label></li>
-											<li><input id="brother" type="checkbox" name="survey" value="brother" /><label for="brother">Brother</label></li>
-											<li><input id="sister" type="checkbox" name="survey" value="sister" /><label for="sister">Sister</label></li>
-										</ul>
-									<li><label for="description">Would you recommend this app to a friend?</label><textarea id="description">Comment Here...</textarea></li>
+									<div class="moreSpace">	
+										<li>Relationship to Owner</li>
+											<ul>
+												<li><input id="parent" type="checkbox" name="survey" value="parent" /><label for="parent">Parent</label></li>
+												<li><input id="aunt" type="checkbox" name="survey" value="aunt" /><label for="aunt">Aunt</label></li>
+												<li><input id="guardian" type="checkbox" name="survey" value="guardian" /><label for="guardian">Guardian</label></li>
+												<li><input id="brother" type="checkbox" name="survey" value="brother" /><label for="brother">Brother</label></li>
+												<li><input id="sister" type="checkbox" name="survey" value="sister" /><label for="sister">Sister</label></li>
+											</ul>
+									</div>	
+									<span class="moreSpace">		
+										<li><label for="description">Would you recommend this app to a friend?</label>
+									</span>
+									<span><br>	
+										<textarea id="description">Comment Here...</textarea></li>
+									</span>	
 									</ul>
 								
 									<ul>
+									<div class="turnGreenTravel">
 										<li>How many miles do you travel each day?</li>
 										<ul>
 											<li><label for="rating"> "Miles are from 1 to 100:"</label>
 											<input id="rating" type="range" min="1" max="100" name="rating"/></li> 
 											<li><input type="hidden" value="false"/></li> 
 										</ul>
+									</div>	
 									</ul>
 								
 							</fieldset>	

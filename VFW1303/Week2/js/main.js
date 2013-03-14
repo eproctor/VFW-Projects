@@ -1,4 +1,4 @@
-/* Name: Eugene Proctor :: Project 2 :: VFW 1303 */
+/* Name: Eugene Proctor :: Project 3 :: VFW 1303 */
 
 /* ========== Define Variables ========== */
 
@@ -19,6 +19,19 @@
 	
 
 
+
+/* ========== Look for blur events ========== */
+/*
+	fullName.addEventListener("blur", saveData);	
+	startdate.addEventListener("blur", saveData);
+	email.addEventListener("blur", saveData);
+	city.addEventListener("blur", saveData);
+	checkBoxField.addEventListener("blur", saveData);
+	description.addEventListener("blur", saveData);
+	rating.addEventListener("blur", saveData);
+//	keyValue.addEventListener("blur", saveData); 
+
+*/
 
 
 /* ========== Obtain Unique Key ========== */
@@ -116,10 +129,10 @@ var displayEntries = function() {
 				var finalValue = localStorage.getItem(finalKey);
 
 /*				var finalOutPut = (finalKey + " : " + finalValue); */
-				var finalOutPut = (finalKey.substring(21,45) + " : " + finalValue);
+				var finalOutPut = (finalKey.substring(20,45) + " : " + finalValue);
 
 				console.log (finalKey + " : " + finalValue);
-				console.log (finalKey.substring(21,45) + " : " + finalValue);
+				console.log (finalKey.substring(20,45) + " : " + finalValue);
 					
 				var newLiTag = document.createElement("li");
 				newLiTag.innerHTML = finalOutPut;
@@ -165,5 +178,10 @@ var addContact = function() {
 			
 /* alert ("this is the bottom of the page");	*/		
 
+
+
+
+
+//------------------------------------------------------------		
 
 
