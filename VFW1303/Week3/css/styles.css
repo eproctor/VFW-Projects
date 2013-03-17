@@ -1,0 +1,164 @@
+/* Name: Eugene Proctor :: Project 3 :: VFW 1303 */
+
+
+/*
+title: Web App Part 3 - css file 
+by: Eugene Proctor   Term: 1303
+for: VFW - CSS Selectors
+*/
+
+
+.dcaRow {
+
+	margin-left: 5em; 
+	font-family: "myriad pro", Times, serif;
+	font-weight: bold;
+
+}
+
+body {
+	 background: #e1b016; 
+}
+
+h1 {
+	text-align: center;
+	font-family: "myriad pro", Times, serif;
+	border: 2px solid black;
+	padding: 10px;
+}
+
+h2 {
+	font-family: "myriad pro", Times, serif;
+	text-align: left;
+}
+
+a:hover {
+	color: #f8620a; /* orange */
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: #0063ec;  /* blue */
+}
+
+p {
+	color: #000000;
+	font-family: "myriad pro", Times, serif;
+	line-height: 1.5em;
+	
+}
+
+legend {
+	font-weight: bold;
+}
+
+
+
+label, input {
+	margin-bottom: 10px;
+}
+
+
+
+.moreSpace {
+
+	margin-bottom: 15px;
+}
+
+
+
+.moreSpaceUp {
+
+	margin-top: 50px;
+	border: 1px solid yellow;
+	
+}
+
+
+.moreSpace li {
+
+	margin-bottom: 10px;
+}
+
+
+
+#startdate, #fullName {
+	float: right;
+	border: 1px solid black; 
+}
+
+
+
+#fontEmail {
+	border: 1px solid #e1b016; 
+}
+
+
+
+#email {
+	border: 1px solid black;
+	float: right;
+}
+
+
+#fontCity {
+/*	border: 1px solid red; */
+}
+
+
+#city {
+/*	border: 1px solid blue; */
+	float: right;
+}
+
+
+.turnGreenTravel {
+
+	margin-top: 40px;
+
+}
+
+
+input:focus, textarea:focus {
+	background-color:yellow;
+}
+
+
+.desTextBox {
+
+	border: 2px solid #0063ec;  /*blue*/
+	background-color:yellow;
+}
+
+
+.turnGreen {
+
+	float: right;
+	border: 2px solid #0063ec;	
+	
+}
+
+
+#greenBorder {
+		float: right;
+		border: 2px solid #0063ec;
+		background-color:yellow;
+
+}
+
+#turnGreen {
+
+		float: right;
+		border: 2px solid #0063ec;
+		background-color:yellow;
+
+}
+
+#greenBorderCity {
+
+		float: right;
+		border: 2px solid #0063ec;
+		background-color:yellow;
+
+}
