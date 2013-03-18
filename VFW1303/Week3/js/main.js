@@ -13,28 +13,79 @@ var docGetElementBid = function(x) {
 
 /* ========== Define Variables ========== */
 
+var surveyCheckBoxes = document.getElementById("checkBoxField").survey;
+			
+		
+ 
 
-/* ========== Obtain Unique Key ========== */
+/* ========== Edit Entry  ========== */
+
+// Grab the data out of local Storage;
+var editContact = function() {
+alert ("This is the Edit Entry Function");
+	
+	var editValue = localStorage.getItem(this.key);
+	var contact = JSON.parse(editValue);
+	
+		//Return Form Screen to Display	
+		var emptyScreen = document.getElementById("hide");
+		emptyScreen.removeAttribute("hidden", "true");
+	
+	//alert ("This is the Edit Entry Function");
+	
+	// Populate Screen with saved data
+	docGetElementBid("startdate").value = contact.fullName[1];
+
+	//localStorage.setItem(newId, JSON.stringify(contact));
+	
+	
+	
+//	startdate.value = 
+	
+//	fullName.value = localStorage.getItem(finalKey);
 
 
 
-/* ===============  Test Check Box Test ============ */
+}
+
+
+
+
+
 
 
 
  /* ======  Save Data to Local Storage  ====== */
 
+var surveyCheckBoxes = document.getElementById("checkBoxField").survey; 	
  
 var saveData = function() {
 
+
+
 var newId 			= Math.random(); 
 
-var contact 			= {};
-	contact.fullName	= ["First Name:", docGetElementBid("fullName").value];	
-	contact.email		= ["Email:", docGetElementBid("email").value];
+var contact 								= {};
+	contact.startdate						= ["Todays Date:", docGetElementBid("startdate").value];
+	contact.fullName						= ["First Name:", docGetElementBid("fullName").value];	
+	contact.email							= ["Email:", docGetElementBid("email").value];
+	contact.city							= ["Travel City:", docGetElementBid("city").value];
+	contact.description						= ["Leave a Comment:", docGetElementBid("description").value];
+	contact.rating							= ["Rate your Comfort Level:", docGetElementBid("rating").value];
+	
+	
+	for(i=0, j=surveyCheckBoxes.length; i<j; i++) {
+		if (surveyCheckBoxes[i].checked) {
+			console.log(surveyCheckBoxes[i].value);
+			contact.surveyCheckBoxes		= ["Relationship to Owner:", surveyCheckBoxes[i].value];
+		}
+	}
+	
 
-// Save data into local storage,  Use stringify to convert our object to a string
+
+// Save data into local storage,  Use stringify to convert object to a string
 localStorage.setItem(newId, JSON.stringify(contact));
+window.location.reload();
 alert("JSON Data has been saved");	
 
 }
@@ -63,7 +114,6 @@ var clearData = function() {
 
 
 
-/* ========== Display Data for testing  ========== */
 
 /* ========== Display Data from Object to Screen  ========== */	
 var displayEntries = function() {
@@ -76,7 +126,7 @@ var displayEntries = function() {
 	newDiv.appendChild(newUl);
 	document.body.appendChild(newDiv);
 	
-	//docGetElementBid("contact").style.display = "block";
+
 	for (var i=0, len=localStorage.length; i<len; i++) {
 	
 		var newLi = document.createElement("li");
@@ -107,8 +157,8 @@ var displayEntries = function() {
 	
 	}
 
-
 }
+
 
 // Make Items Link Function
 // Will create the edit and delete links
@@ -119,7 +169,7 @@ var createLinks = function(key, anotherLi) {
 	createEditLink.href = "#";
 	createEditLink.key = key;
 	var changeText = "Edit Contact";
-	//createEditLink.addEventListener("click", editContact);
+	createEditLink.addEventListener("click", editContact);
 	createEditLink.innerHTML = changeText;
 	anotherLi.appendChild(createEditLink);
 
@@ -134,6 +184,17 @@ var createLinks = function(key, anotherLi) {
 	//createDeleteLink.addEventListener("click", deleteContact);
 	createDeleteLink.innerHTML = removeText;
 	anotherLi.appendChild(createDeleteLink);
+
+
+
+
+/* ========== Display only Results  ========== */	
+
+
+var emptyScreen = document.getElementById("hide");
+
+emptyScreen.setAttribute("hidden", "true");
+
 
 }
 
