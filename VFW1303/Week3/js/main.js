@@ -4,10 +4,11 @@
 
 var docGetElementBid = function(x) {
 
-	var theElement = document.getElementById(x);
-	return theElement; 	
+	var theId = document.getElementById(x);
+	return theId; 	
 
 }
+
 
 
 
@@ -22,38 +23,73 @@ var surveyCheckBoxes = document.getElementById("checkBoxField").survey;
 
 // Grab the data out of local Storage;
 var editContact = function() {
-alert ("This is the Edit Entry Function");
+
+
+
+	
+//Return Form Screen to Display	Form
+		var emptyScreen = docGetElementBid("hide");
+		emptyScreen.removeAttribute("hidden", "true");	
+
+alert ("This is the Edit Entry Function");	
 	
 	var editValue = localStorage.getItem(this.key);
 	var contact = JSON.parse(editValue);
 	
-		//Return Form Screen to Display	
-		var emptyScreen = document.getElementById("hide");
-		emptyScreen.removeAttribute("hidden", "true");
 	
-	//alert ("This is the Edit Entry Function");
+		
+		var parentBox = docGetElementBid("parent");
+		var auntBox = docGetElementBid("aunt");
+		var guardianBox = docGetElementBid("guardian");
+		var brotherBox = docGetElementBid("brother");
+		var sisterBox = docGetElementBid("sister");
+		
+		
+		/*======================================================================*/
+		
+				
+		
+		if (contact.surveyCheckBoxes[1] === "parent") {
+			parentBox.setAttribute("checked", "checked")}
+			
+		if (contact.surveyCheckBoxes[1] === "aunt") {
+			auntBox.setAttribute("checked", "checked");
+			console.log (auntBox);}
+		if (contact.surveyCheckBoxes[1] === "guardian") {
+			guardianBox.setAttribute("checked", "checked");}
+			
+		if (contact.surveyCheckBoxes[1] === "brother") {
+			brotherBox.setAttribute("checked", "checked");}
+			
+		if (contact.surveyCheckBoxes[1] === "sister") {
+			sisterBox.setAttribute("checked", "checked");}				
+			
 	
-	// Populate Screen with saved data
-	docGetElementBid("startdate").value = contact.fullName[1];
-
-	//localStorage.setItem(newId, JSON.stringify(contact));
-	
-	
-	
-//	startdate.value = 
-	
-//	fullName.value = localStorage.getItem(finalKey);
-
-
-
-}
-
-
-
-
-
-
-
+// Populate Screen with saved data
+	docGetElementBid("startdate").value = contact.startdate[1];
+	docGetElementBid("fullName").value = contact.fullName[1];
+	docGetElementBid("email").value = contact.email[1];
+	docGetElementBid("city").value = contact.city[1];
+	docGetElementBid("description").value = contact.description[1];
+	docGetElementBid("rating").value = contact.rating[1];
+ 
+		
+}		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*========================================================================*/
+		
+		
 
  /* ======  Save Data to Local Storage  ====== */
 
