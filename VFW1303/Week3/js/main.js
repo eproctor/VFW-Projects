@@ -2,7 +2,7 @@
 
 /* ========== Waiting on Dom to be ready  ========== */
 
-var docGetElementBid = function(x) {
+var docGetId = function(x) {
 
 	var theId = document.getElementById(x);
 	return theId; 	
@@ -15,11 +15,87 @@ var docGetElementBid = function(x) {
 /* ========== Define Variables ========== */
 
 var surveyCheckBoxes = document.getElementById("checkBoxField").survey;
-			
+var  errorVal = docGetId("errorValidation");			
 		
  
+ 
+/* ========== Edit Data Upon Submit  ========== */
 
-/* ========== Edit Entry  ========== */
+
+ var editData = function() {
+ 
+//var newData = docGetId()
+	alert("This is the function for newData");
+ 
+ 
+// editValue.key
+ 
+ 
+ }
+ 
+ 
+ 
+// Validate the Form Field 
+ var val = function(e) {
+ 	var valName = docGetId("fullName");
+ 	var valEmail = docGetId("email");
+ 	
+// Clear Error Messages from screen
+	/*errorMsg.innerHTML = ""; */
+	valName.style.border = "1px solid black";
+	/*valEmail.style.border = "1px solid black";*/
+ 	
+
+// Display error messages
+	var errorMsg = [];
+	
+// Check for error
+	if (valName.value == "") {
+		var nameError = "Please enter your name.";
+		valName.style.border = "1px solid red";
+		
+		errorMsg.push(nameError);
+	}
+		 
+/*
+// Validate email using exec method for exact match in string
+var regexp = /^\w+([\.-])?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+	if (!(regexp.exec(valEmail.value))) {
+		var emailError = "Please enter a valid Email Address.";
+		valEmail.style.border = "1px solid red";
+		errorMsg.push(emailError);
+	}	 
+
+*/		 
+// If errors exist from the Validation
+	if(errorMsg.length >= 1) {
+		for(var i=0, j=errorMsg.length; i<j; i++) {
+			var msgLi = document.createElement("li");
+			msgLi.innerHTML = errorMsg[i];
+			errorVal.appendChild(msgLi);
+		
+		}
+		 
+		 e.preventDefault();
+		 return false;
+		 	
+	}else{
+		// Save Data if there are no errors using the key value from the val function
+		saveData(this.key);
+		}
+		
+	}		 
+
+ 
+// }
+ 
+ 
+ 
+ 
+ 
+
+/* ========== Edit Entry to Change Information  ========== */
 
 // Grab the data out of local Storage;
 var editContact = function() {
@@ -28,7 +104,7 @@ var editContact = function() {
 
 	
 //Return Form Screen to Display	Form
-		var emptyScreen = docGetElementBid("hide");
+		var emptyScreen = docGetId("hide");
 		emptyScreen.removeAttribute("hidden", "true");	
 
 alert ("This is the Edit Entry Function");	
@@ -38,11 +114,11 @@ alert ("This is the Edit Entry Function");
 	
 	
 		
-		var parentBox = docGetElementBid("parent");
-		var auntBox = docGetElementBid("aunt");
-		var guardianBox = docGetElementBid("guardian");
-		var brotherBox = docGetElementBid("brother");
-		var sisterBox = docGetElementBid("sister");
+		var parentBox = docGetId("parent");
+		var auntBox = docGetId("aunt");
+		var guardianBox = docGetId("guardian");
+		var brotherBox = docGetId("brother");
+		var sisterBox = docGetId("sister");
 		
 		
 		/*======================================================================*/
@@ -66,13 +142,33 @@ alert ("This is the Edit Entry Function");
 			
 	
 // Populate Screen with saved data
-	docGetElementBid("startdate").value = contact.startdate[1];
-	docGetElementBid("fullName").value = contact.fullName[1];
-	docGetElementBid("email").value = contact.email[1];
-	docGetElementBid("city").value = contact.city[1];
-	docGetElementBid("description").value = contact.description[1];
-	docGetElementBid("rating").value = contact.rating[1];
+	docGetId("startdate").value = contact.startdate[1];
+	docGetId("fullName").value = contact.fullName[1];
+	docGetId("email").value = contact.email[1];
+	docGetId("city").value = contact.city[1];
+	docGetId("description").value = contact.description[1];
+	docGetId("rating").value = contact.rating[1];
  
+
+
+
+// Modify Save button to be an Update button
+
+var editButton = docGetId("submitButton")
+editButton.removeAttribute("onclick","saveData");
+editButton.setAttribute("value","Edit Data");
+// Saves key value for the entry we are editing...
+editButton.addEventListener("click",val);
+editButton.key = this.key;
+
+
+
+
+// Return editValue to use in updating data
+//return editValue;
+
+
+
 		
 }		
 		
@@ -95,19 +191,26 @@ alert ("This is the Edit Entry Function");
 
 var surveyCheckBoxes = document.getElementById("checkBoxField").survey; 	
  
-var saveData = function() {
+var saveData = function(key) {
+	//if there is no key.  This is a new item and needs a new key
+	if (!key) {
+	
+		var newId 			= Math.random(); 
+	
+	}else{
+		// This will keep the current key so we can update the entry
+		newId = key;
+	
+	}
 
-
-
-var newId 			= Math.random(); 
 
 var contact 								= {};
-	contact.startdate						= ["Todays Date:", docGetElementBid("startdate").value];
-	contact.fullName						= ["First Name:", docGetElementBid("fullName").value];	
-	contact.email							= ["Email:", docGetElementBid("email").value];
-	contact.city							= ["Travel City:", docGetElementBid("city").value];
-	contact.description						= ["Leave a Comment:", docGetElementBid("description").value];
-	contact.rating							= ["Rate your Comfort Level:", docGetElementBid("rating").value];
+	contact.startdate						= ["Todays Date:", docGetId("startdate").value];
+	contact.fullName						= ["First Name:", docGetId("fullName").value];	
+	contact.email							= ["Email:", docGetId("email").value];
+	contact.city							= ["Travel City:", docGetId("city").value];
+	contact.description						= ["Leave a Comment:", docGetId("description").value];
+	contact.rating							= ["Rate your Comfort Level:", docGetId("rating").value];
 	
 	
 	for(i=0, j=surveyCheckBoxes.length; i<j; i++) {
