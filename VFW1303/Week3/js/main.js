@@ -19,20 +19,7 @@ var  errorVal = docGetId("errorValidation");
 		
  
  
-/* ========== Edit Data Upon Submit  ========== */
 
-
- var editData = function() {
- 
-//var newData = docGetId()
-	alert("This is the function for newData");
- 
- 
-// editValue.key
- 
- 
- }
- 
  
  
 // Validate the Form Field 
@@ -57,6 +44,8 @@ var  errorVal = docGetId("errorValidation");
 		errorMsg.push(nameError);
 	}
 		 
+
+/* ========== Email Validation  ========== */
 /*
 // Validate email using exec method for exact match in string
 var regexp = /^\w+([\.-])?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -81,18 +70,12 @@ var regexp = /^\w+([\.-])?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 		 return false;
 		 	
 	}else{
-		// Save Data if there are no errors using the key value from the val function
+// Save Data if there are no errors using the key value from the val function
 		saveData(this.key);
 		}
 		
 	}		 
 
- 
-// }
- 
- 
- 
- 
  
 
 /* ========== Edit Entry to Change Information  ========== */
@@ -106,8 +89,10 @@ var editContact = function() {
 //Return Form Screen to Display	Form
 		var emptyScreen = docGetId("hide");
 		emptyScreen.removeAttribute("hidden", "true");	
+		
 
-alert ("This is the Edit Entry Function");	
+
+//alert ("This is the Edit Entry Function");	
 	
 	var editValue = localStorage.getItem(this.key);
 	var contact = JSON.parse(editValue);
@@ -154,19 +139,12 @@ alert ("This is the Edit Entry Function");
 
 // Modify Save button to be an Update button
 
-var editButton = docGetId("submitButton")
-editButton.removeAttribute("onclick","saveData");
-editButton.setAttribute("value","Edit Data");
+	var editButton = docGetId("submitButton")
+	editButton.removeAttribute("onclick","saveData");
+	editButton.setAttribute("value","Edit Data");
 // Saves key value for the entry we are editing...
-editButton.addEventListener("click",val);
-editButton.key = this.key;
-
-
-
-
-// Return editValue to use in updating data
-//return editValue;
-
+	editButton.addEventListener("click",val);
+	editButton.key = this.key;
 
 
 		
@@ -174,13 +152,22 @@ editButton.key = this.key;
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
+
+
+var deleteContact = function() {
+	var confirmDelete = confirm ("Please confirm to delete this contact");
+	if (confirmDelete) {
+		localStorage.removeItem(this.key);
+		alert ("The contact has been deleted");
+		window.location.reload();
+	
+	}else{
+		alert ("The contact did not delete");
+		}
+}	
+	
+
+	
 		
 		
 		/*========================================================================*/
@@ -252,11 +239,10 @@ var clearData = function() {
 
 
 
-
-
 /* ========== Display Data from Object to Screen  ========== */	
 var displayEntries = function() {
 
+	
 
 	var newDiv = document.createElement("div");
 	newDiv.setAttribute("newId", "contact");
@@ -291,10 +277,11 @@ var displayEntries = function() {
 			
 		
 		}
-		//Call function to Create the edit and delete links
+//Call function to Create the edit and delete links
 		createLinks(localStorage.key(i), anotherLi);
 	
 	}
+
 
 }
 
@@ -320,7 +307,7 @@ var createLinks = function(key, anotherLi) {
 	createDeleteLink.href = "#";
 	createDeleteLink.key = key;
 	var removeText = "Delete Contact";
-	//createDeleteLink.addEventListener("click", deleteContact);
+	createDeleteLink.addEventListener("click", deleteContact);
 	createDeleteLink.innerHTML = removeText;
 	anotherLi.appendChild(createDeleteLink);
 
