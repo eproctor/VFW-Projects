@@ -167,3 +167,19 @@ input:focus, textarea:focus {
 	
 		color: red;
 }
+
+img  {
+
+	list-style: none;
+	margin-top: 40px;
+	width: 400px;
+	height: 45px;
+
+}
+
+ul {
+	
+	list-style: none;
+
+
+}

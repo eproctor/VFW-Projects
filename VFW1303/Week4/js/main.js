@@ -4,13 +4,13 @@
 
 //window.addEventListener("DOMContentLoaded", function() {
 
+
 var docGetId = function(x) {
 
 	var theId = document.getElementById(x);
 	return theId; 	
 
 }
-
 
 
 
@@ -294,47 +294,65 @@ var clearData = function() {
 var displayEntries = function() {
 
 
-	var newDiv = document.createElement("div");
-	newDiv.setAttribute("newId", "contact");
-	var newUl = document.createElement("ul");
-	
-	newDiv.appendChild(newUl);
-	document.body.appendChild(newDiv);
-	
+//	console.log ("Local Storage Length is " + localStorage.length);
 
-	for (var i=0, len=localStorage.length; i<len; i++) {
-	
-		var newLi = document.createElement("li");
-		newUl.appendChild(newLi);
+			var newDiv = document.createElement("div");
+			newDiv.setAttribute("newId", "contact");
+			var newUl = document.createElement("ul");
 			
-		var anotherLi = document.createElement("li");
-	
-		
-		var key = localStorage.key(i);
-		var correctContact = localStorage.getItem(key);
-		
-		//Take the string from local storage and convert it back to an object by using JSON.parse()
-		var contact = JSON.parse(correctContact);
-		var anotherUl = document.createElement("ul");
-		newLi.appendChild(anotherUl);
-		for (var n in contact) {
-			var newSubli = document.createElement("li");
-			anotherUl.appendChild(newSubli);
-			
-			var text = contact[n][0] + "  " +contact[n][1]
-			newSubli.innerHTML = text;
-			anotherUl.appendChild(anotherLi);
+			newDiv.appendChild(newUl);
+			document.body.appendChild(newDiv);
 			
 		
+			for (var i=0, len=localStorage.length; i<len; i++) {
+			
+				var newLi = document.createElement("li");
+				newUl.appendChild(newLi);
+					
+				var anotherLi = document.createElement("li");
+			
+				
+				var key = localStorage.key(i);
+				var correctContact = localStorage.getItem(key);
+				
+				//Take the string from local storage and convert it back to an object by using JSON.parse()
+				var contact = JSON.parse(correctContact);
+				var anotherUl = document.createElement("ul");
+				newLi.appendChild(anotherUl);
+				
+				//function to get image and right to the screen
+				getSurveyImage(contact.surveyCheckBoxes[1],anotherUl);
+				
+				for (var n in contact) {
+					var newSubli = document.createElement("li");
+					anotherUl.appendChild(newSubli);
+					
+					var text = contact[n][0] + "  " +contact[n][1]
+					newSubli.innerHTML = text;
+					anotherUl.appendChild(anotherLi);
+					
+				
+				}
+				//Call function to Create the edit and delete links
+				createLinks(localStorage.key(i), anotherLi);
+				
 		}
-		//Call function to Create the edit and delete links
-		createLinks(localStorage.key(i), anotherLi);
+
+	// Function to Get the Survey Image and right to the screen for the Contact
+	function getSurveyImage(picName, anotherUl) {
+		var surveyImageLi = document.createElement("li");
+		anotherUl.appendChild(surveyImageLi)
+		var newPic = document.createElement("img");
+		var setPicSource = newPic.setAttribute("src","images/" + picName + ".png");
+		surveyImageLi.appendChild(newPic);
+		
+		
+	
+	
 	
 	}
 
-
 }
-
 
 // Make Items Link Function
 // Will create the edit and delete links
@@ -381,14 +399,17 @@ emptyScreen.setAttribute("hidden", "true");
 
 var emptyStorage = function() {
 	
+	
+	
 	if (localStorage.length===0) {
 	
-		
+		//
 		alert ("Local Storage is Empty.  Testing Data is added");
 		console.log ("The storage is empty. Testing Data is added");
 		fillTestData();
 		
 	} else {
+		
 		displayEntries();
 
 		} 
