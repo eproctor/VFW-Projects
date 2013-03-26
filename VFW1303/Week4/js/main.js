@@ -14,34 +14,24 @@ var docGetId = function(x) {
 
 
 
+
+
+
+
+
+
 /* ========== Define Variables ========== */
 
 var surveyCheckBoxes = document.getElementById("checkBoxField").survey;
 var  errorVal = docGetId("errorValidation");			
 		
  
- 
-/* ========== Edit Data Upon Submit  ========== */
-
-
- var editData = function() {
- 
-//var newData = docGetId()
-	alert("This is the function for newData");
- 
- 
-// editValue.key
- 
- 
- }
- 
- 
+  
  
 var validate = function () {
 
 	var valName = docGetId("fullName");
 	if (valName.value == "") {
-//	alert ("valName is equal to blank");
 		val();
 	} else {
 		saveData();
@@ -52,16 +42,14 @@ var validate = function () {
  
  
  
- 
 // Validate the Form Field 
  var val = function(e) {
  	var valName = docGetId("fullName");
  	var valEmail = docGetId("email");
  	
 // Clear Error Messages from screen
-	/*errorMsg.innerHTML = ""; */
 	valName.style.border = "1px solid black";
-	/*valEmail.style.border = "1px solid black";*/
+	
  	
 
 // Display error messages
@@ -106,12 +94,6 @@ var regexp = /^\w+([\.-])?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 		}
 		
 	}		 
-
- 
-// }
- 
- 
- 
  
  
 
@@ -126,6 +108,14 @@ var editContact = function() {
 //Return Form Screen to Display	Form
 		var emptyScreen = docGetId("hide");
 		emptyScreen.removeAttribute("hidden", "true");	
+		
+
+
+
+
+
+
+		
 
 //alert ("This is the Edit Entry Function");	
 	
@@ -168,15 +158,42 @@ var editContact = function() {
 	docGetId("city").value = contact.city[1];
 	docGetId("description").value = contact.description[1];
 	docGetId("rating").value = contact.rating[1];
+
+
+
+
  
+ 
+/* 
+ //Remove listing from bottom of main window
+
+var clearBottom = document.getElementById("contact");
+clearBottom.innerHTML="Test"; 
+
+//Prevent continuous displays during data entry 
+
+var clearBottom = docGetId("contact");
+clearBottom.innerHTML = "test";
+/*clearBottom.removeAttribute("tag","div");*/
+//Prevent multiple displays occuring during display function 
+/*
+var clearBottom = docGetId("contact");
+clearBottom.removeAttribute("id","contact");
+
+
+*/
+
+
+
 
 
 
 // Modify Save button to be an Update button
 
-var editButton = docGetId("submitButton")
+var editButton = docGetId("submitButton");
 editButton.removeAttribute("onclick","saveData");
-editButton.setAttribute("value","Edit Data");
+editButton.setAttribute("value","Update & Save New Data");
+
 // Saves key value for the entry we are editing...
 editButton.addEventListener("click",val);
 editButton.key = this.key;
@@ -188,11 +205,10 @@ editButton.key = this.key;
 //return editValue;
 
 
-
 		
 }		
 		
-		
+
 		
 
 
@@ -208,15 +224,6 @@ var deleteContact = function() {
 		}
 }	
 	
-
-
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		/*========================================================================*/
@@ -294,14 +301,26 @@ var clearData = function() {
 var displayEntries = function() {
 
 
+
 //	console.log ("Local Storage Length is " + localStorage.length);
 
 			var newDiv = document.createElement("div");
-			newDiv.setAttribute("newId", "contact");
+			
+			
+//Prevent multiple displays occurring during display function 
+
+var clearBottom = docGetId("contact");
+clearBottom.removeAttribute("id","contact");
+			
+			
+			
+/*			newDiv.setAttribute("id", "contact"); */
 			var newUl = document.createElement("ul");
 			
-			newDiv.appendChild(newUl);
-			document.body.appendChild(newDiv);
+/*			newDiv.appendChild(newUl);*/
+			
+			clearBottom.appendChild(newUl);
+			document.body.appendChild(clearBottom);
 			
 		
 			for (var i=0, len=localStorage.length; i<len; i++) {
@@ -359,6 +378,10 @@ var displayEntries = function() {
 
 var createLinks = function(key, anotherLi) {
 
+
+
+
+
 	var createEditLink = document.createElement("a");
 	createEditLink.href = "#";
 	createEditLink.key = key;
@@ -388,6 +411,8 @@ var createLinks = function(key, anotherLi) {
 var emptyScreen = document.getElementById("hide");
 
 emptyScreen.setAttribute("hidden", "true");
+
+
 
 
 }
