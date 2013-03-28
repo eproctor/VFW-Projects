@@ -340,6 +340,7 @@ clearBottom.removeAttribute("id","contact");
 				newLi.appendChild(anotherUl);
 				
 				//function to get image and right to the screen
+				console.log("contact.surveyCheckBoxes[1] is" + contact.surveyCheckBoxes[1]);
 				getSurveyImage(contact.surveyCheckBoxes[1],anotherUl);
 				
 				for (var n in contact) {

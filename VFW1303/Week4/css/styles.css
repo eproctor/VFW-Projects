@@ -8,9 +8,12 @@ for: VFW - CSS Selectors
 */
 
 
+
+
+
 .dcaRow {
 
-	margin-left: 5em; 
+	margin-left: 8em; 
 	font-family: "myriad pro", Times, serif;
 	font-weight: bold;
 
@@ -63,7 +66,31 @@ label, input {
 
 .moreSpace {
 
-	margin-bottom: 15px;
+	margin-bottom: 20px;
+}
+
+
+
+.moreSpaceTwo {
+
+	margin-bottom: 15px; 
+ 
+}
+
+
+.moreSpaceSurvey {
+
+	margin-bottom: 5px;
+
+}
+
+
+
+.moreSpaceDes {
+
+	margin-bottom: 0px;
+	margin-top: 15px;
+
 }
 
 
@@ -78,7 +105,7 @@ label, input {
 
 .moreSpace li {
 
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 
@@ -89,7 +116,7 @@ label, input {
 }
 
 
-
+/*delete fontEmail line 66*/
 #fontEmail {
 	border: 1px solid #e1b016; 
 }
@@ -101,7 +128,7 @@ label, input {
 	float: right;
 }
 
-
+/*delete fontCity*/
 #fontCity {
 /*	border: 1px solid red; */
 }
@@ -115,7 +142,7 @@ label, input {
 
 .turnGreenTravel {
 
-	margin-top: 40px;
+	margin-top: 20px;
 
 }
 
@@ -183,3 +210,4 @@ ul {
 
 
 }
+

@@ -30,12 +30,12 @@
 				
 			</article>
 				<div class="moreSpace">		
-					<ul class="dcaRow">											
+					<div class="dcaRow">											
 						 <span><a href="#" onclick="emptyStorage()" title="Display Data"> Display Data |</a></span>
 						 <span><a href="#" onclick="clearData()" title="Clear Data"> Clear Data |</a></span>
 						 <span><a href="#" onclick="addContact()" title="Add Another Contact"> Add Contact</a></span>
 						
-					</ul>
+					</div>
 				</div>
 			
 				<div id="editLink">
@@ -43,34 +43,20 @@
 						<form action = "#" method="post" id="checkBoxField" >
 							<fieldset>
 								<legend>Point of Contact</legend>
-								<div >
-									<ul id="errorValidation"></ul>
-								</div>
+								<div><ul id="errorValidation"></ul></div>
 								
-									<ul>
-										<div class="moreSpace">
-											<li>
-												<label id="key">Key Value</label>									
-											</li>
-										</div>
-										<li>							
+									<ul class="moreSpace">
+										<li><label id="key">Key Value</label></li>
+										<li >							
 											<label for="startdate">Today&#39;s Date:</label>
-											<input type="date" min="2012-01-01" max="2013-12-31" id="startdate" name="startdate" placeholder="yyyy-mm-dd"/>
+											<input  type="date" min="2012-01-01" max="2013-12-31" id="startdate" name="startdate" placeholder="yyyy-mm-dd"/>
 										</li>
-									</ul>	
-									
-									<ul>
-									
-										<div class="moreSpace">
-											<li><label class="moreSpace" for="fullName">Point of Contact:</label><input type="text" id="fullName" /></li>
-										</div>
-										<div class="moreSpace">
-											<div id="fontEmail">
-											<li><label class="moreSpace" for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/></li>
-											</div>
-										</div>
-										<div class="moreSpace">									
-											<li id="fontCity" ><span>City you live in:</span>
+ 
+											<li><label class="moreSpaceTwo" for="fullName">Point of Contact:</label><input type="text" id="fullName" /></li>
+ 
+											<li><label class="moreSpaceTwo" for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/>
+											</li>
+											<li class="moreSpace"><span>City you live in:</span>
 												<select id="city">
 													<optgroup label="Please Choose:">
 														<option value="atlanta">Atlanta</option>
@@ -79,60 +65,46 @@
 													</optgroup>	
 												</select>
 											</li>
-							 			</div>	
+ 
 									</ul>
 							</fieldset>
 							<fieldset>
 								<legend>Survey</legend>		
 									<ul>
-									<div class="moreSpace">	
-										<li>Relationship to Owner</li>
+										
+										<li class="moreSpace">Relationship to Owner</li>
 											<ul>
-												<li><input id="parent" type="checkbox" name="survey" value="parent" /><label for="parent">Parent</label></li>
-												<li><input id="aunt" type="checkbox" name="survey" value="aunt" /><label for="aunt">Aunt</label></li>
-												<li><input id="guardian" type="checkbox" name="survey" value="guardian" /><label for="guardian">Guardian</label></li>
-												<li><input id="brother" type="checkbox" name="survey" value="brother" /><label for="brother">Brother</label></li>
-												<li><input id="sister" type="checkbox" name="survey" value="sister" /><label for="sister">Sister</label></li>
+												<li class="moreSpaceSurvey"><input id="parent" type="checkbox" name="survey" value="parent" /><label for="parent">Parent</label></li>
+												<li class="moreSpaceSurvey"><input id="aunt" type="checkbox" name="survey" value="aunt" /><label for="aunt">Aunt</label></li>
+												<li class="moreSpaceSurvey"><input id="guardian" type="checkbox" name="survey" value="guardian" /><label for="guardian">Guardian</label></li>
+												<li class="moreSpaceSurvey"><input id="brother" type="checkbox" name="survey" value="brother" /><label for="brother">Brother</label></li>
+												<li class="moreSpaceSurvey"><input id="sister" type="checkbox" name="survey" value="sister" /><label for="sister">Sister</label></li>
 											</ul>
-									</div>	
-									<span class="moreSpace">		
-										<li><label for="description">Would you recommend this app to a friend?</label>
-									</span>
-									<span><br>	
-										<textarea id="description">Comment Here...</textarea></li>
-									</span>	
+										<li class="moreSpaceDes"><label for="description">Would you recommend this app to a friend?</label><br>
+											<textarea id="description">Comment Here...</textarea></li>
 									</ul>
 								
 									<ul>
-									<div class="turnGreenTravel">
-										<li>How many miles do you travel each day?</li>
-										<ul>
-											<li><label for="rating"> "Miles are from 1 to 100:"</label>
-											<input id="rating" type="range" min="1" max="100" name="rating"/></li> 
-											<li><input type="hidden" value="false"/></li> 
-										</ul>
-									</div>	
+										 <li class="turnGreenTravel">How many miles do you travel each day?</li>
+											<ul>
+												<li><label for="rating"> "Miles are from 1 to 100:"</label>
+													<input id="rating" type="range" min="1" max="100" name="rating"/>
+												</li> 
+												<li><input type="hidden" value="false"/>
+												</li> 
+											</ul>
 									</ul>
-								
 							</fieldset>	
 						
 							<footer>
 								<nav>
 									<ul>
-										<div class="moreSpace">		
+										 <li class="moreSpace"> <span><a href="#" onclick="emptyStorage()" title="Display Data"> Display Data |</a></span>
+											 <span><a href="#" onclick="clearData()" title="Clear Data"> Clear Data</a></span>
+										 </li>
 										
-											<li> <span id="displayRow1" ><a href="#" onclick="emptyStorage()" title="Display Data"> Display Data |</a></span>
-											 <span id="clearRow1" ><a href="#" onclick="clearData()" title="Clear Data"> Clear Data</a></span></li>
-											 
-										</div>
-										 
-										<!-- li><input type="button" onclick="saveData()" id="submitButton" value="Submit Information" /></li -->					
-										<!-- li><input type="button" onclick="val()" id="submitButton" value="Submit Information" /></li -->
-										<li><input type="button" onclick="validate()" id="submitButton" value="Submit Information" /></li>
-										 
-										 
-										 
-										 
+										<li><input type="button" onclick="validate()" id="submitButton" value="Submit Information" />
+										</li>
 									</ul>
 								</nav>
 							</footer>
