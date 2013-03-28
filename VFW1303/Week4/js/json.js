@@ -10,9 +10,10 @@ var json = {
 			"fullName":	 		["First Name: ", "Paul"],
 			"email":			["Email: ","paul@gmail.com"],
 			"city":				["Travel City: ","florida"],
+			"surveyCheckBoxes":	["Relationship to Owner: ","guardian"],			
 			"description":		["Leave a Comment: ","This is a test for Paul"],
-			"rating":			["Rate your Comfort Level: ","99"],
-			"surveyCheckBoxes":	["Relationship to Owner: ","guardian"]			
+			"rating":			["Rate your Comfort Level: ","99"]
+			
 			
 			
 
@@ -24,9 +25,10 @@ var json = {
 			"fullName":	 		["First Name: ", "Willie"],
 			"email":			["Email: ","Willie@gmail.com"],
 			"city":				["Travel City: ","charlotte"],
+			"surveyCheckBoxes":	["Relationship to Owner: ","parent"],			
 			"description":		["Leave a Comment: ","This is a test for Willie"],
-			"rating":			["Rate your Comfort Level: ","100"],
-			"surveyCheckBoxes":	["Relationship to Owner: ","parent"]			
+			"rating":			["Rate your Comfort Level: ","100"]
+						
 
 
 
@@ -38,9 +40,10 @@ var json = {
 			"fullName":	 		["First Name: ", "Greg"],
 			"email":			["Email: ","greg@gmail.com"],
 			"city":				["Travel City: ","atlanta"],
+			"surveyCheckBoxes":	["Relationship to Owner: ","brother"],
 			"description":		["Leave a Comment: ","This is a test for Greg"],
-			"rating":			["Rate your Comfort Level: ","35"],
-			"surveyCheckBoxes":	["Relationship to Owner: ","brother"]
+			"rating":			["Rate your Comfort Level: ","35"]
+
 
 
 			
