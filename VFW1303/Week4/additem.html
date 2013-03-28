@@ -46,19 +46,21 @@
 								<div><ul id="errorValidation"></ul></div>
 								
 									<ul class="moreSpace">
-										<li><label id="key">Key Value</label></li>
+										<li><label id="key"> *Required Field</label></li>
 										<li >							
 											<label for="startdate">Today&#39;s Date:</label>
 											<input  type="date" min="2012-01-01" max="2013-12-31" id="startdate" name="startdate" placeholder="yyyy-mm-dd"/>
 										</li>
  
-											<li><label class="moreSpaceTwo" for="fullName">Point of Contact:</label><input type="text" id="fullName" /></li>
+											<li><label class="moreSpaceTwo" for="fullName">*Point of Contact:</label><input type="text" id="fullName" /></li>
  
-											<li><label class="moreSpaceTwo" for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/>
+											<!-- li><label class="moreSpaceTwo" for="email">Email Address :</label><input type="email" id="email" placeholder="example@email.com"/ -->
+											<li><label class="moreSpaceTwo" for="email">*Email Address :</label><input type="email" id="email"/>
 											</li>
 											<li class="moreSpace"><span>City you live in:</span>
 												<select id="city">
 													<optgroup label="Please Choose:">
+														<option value="Make Selection">Make a Selection</option>
 														<option value="atlanta">Atlanta</option>
 														<option value="charlotte">Charlotte</option>
 														<option value="florida">Florida</option>
