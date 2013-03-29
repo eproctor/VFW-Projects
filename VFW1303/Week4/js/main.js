@@ -19,7 +19,6 @@ var docGetId = function(x) {
 
 
 
-
 /* ========== Define Variables ========== */
 
 var surveyCheckBoxes = document.getElementById("checkBoxField").survey;
@@ -255,6 +254,14 @@ var contact 								= {};
 	contact.description						= ["Leave a Comment:", docGetId("description").value];
 	contact.rating							= ["Rate your Comfort Level:", docGetId("rating").value];
 	
+
+
+
+	
+	
+
+
+
 	
 	for(i=0, j=surveyCheckBoxes.length; i<j; i++) {
 		if (surveyCheckBoxes[i].checked) {
@@ -271,6 +278,26 @@ window.location.reload();
 alert("JSON Data has been saved");	
 
 }
+
+
+
+
+
+/* ========== Extra Credit - Slide Rule Counter  ========== */
+
+
+
+var extraCredit = function() {
+
+	var rateBar = docGetId("ratingTape");
+	rateBar.innerHTML = rating.value;
+	
+} 	
+
+var slideBar = docGetId("rating");
+slideBar.addEventListener("click", extraCredit);	
+	
+
 
 
 
